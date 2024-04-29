@@ -4,7 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 import About from "../Pages/About";
 
 import NotFound from "../Pages/About";
-import App from "../App";
+// import App from "../App";
 import AddPlace from "../Components/AddPlace";
 import UpdatePlace from "../Components/UpdatePlace";
 import Github from "../Pages/GithubLogin";
@@ -16,6 +16,7 @@ import Root from "../Layout/Root";
 import Register from "../Pages/Register";
 import Login from "../Pages/Login";
 import ContactUs from '../Pages/ContactUs';
+import Home from "../Pages/Home";
 // import AddPlace from '../Components/AddPlace'
 
 
@@ -26,9 +27,14 @@ const routes = createBrowserRouter([
         element:<Root></Root>,
         errorElement:<NotFound></NotFound>,
         children:[
+            // {
+            //     path: "/",
+            //     element: <App></App>,  
+            //     loader: () => fetch('http://localhost:5000/place')
+            //   },
             {
                 path: "/",
-                element: <App></App>,  
+                element: <Home></Home>,  
                 loader: () => fetch('http://localhost:5000/place')
               },
               {

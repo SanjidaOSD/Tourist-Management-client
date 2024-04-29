@@ -1,9 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
-import { GiFamilyHouse } from "react-icons/gi";
+// import { GiFamilyHouse } from "react-icons/gi";
 import UseAuth from "../Hooks/UseAuth";
 // import { FaUserLarge } from "react-icons/fa6";
 import { FcBusinesswoman } from "react-icons/fc";
-import { PiAirplaneTiltFill } from "react-icons/pi";
+// import { PiAirplaneTiltFill } from "react-icons/pi";
 import plane from '../assets/plane.png';
 
 
@@ -20,7 +20,7 @@ const Navbar = () => {
         <li><NavLink to='/about'>About us</NavLink></li>
 
         {user && <>
-            <li><NavLink to='/updateProfile'>Update Profile</NavLink></li>
+            <li><NavLink to='/updatePlace'>Update Place</NavLink></li>
             <li><NavLink to='/contact'>Contact Us</NavLink></li>
         </>}
     </>
