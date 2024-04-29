@@ -1,5 +1,6 @@
 
-import { GiFamilyHouse } from "react-icons/gi";
+// import { GiFamilyHouse } from "react-icons/gi";
+import plane from '../assets/plane.png'
 
 const Footer = () => {
     return (
@@ -7,8 +8,9 @@ const Footer = () => {
             <hr />
             <footer className="footer p-10 bg-White text-black lg:w-auto w-96">
                 <aside>
-                    <GiFamilyHouse className="font-extrabold w-12 h-16"></GiFamilyHouse>
-                    <p className="font-bold"><span className="text-red-800 text-2xl">HOME</span> Industries Ltd.<br />Providing reliable tech since 1992</p>
+                    {/* <GiFamilyHouse className="font-extrabold w-12 h-16"></GiFamilyHouse> */}
+                    <img src={plane} className="h-[70px] w-[100px]" alt="" />
+                    <p className="font-bold"><span className="text-red-800 text-2xl">AdventureAtlas</span> Ltd.<br />Providing reliable tech since 1992</p>
                 </aside>
                 <nav>
                     <h6 className="footer-title text-xl font-bold">Services</h6>
