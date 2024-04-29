@@ -38,13 +38,17 @@ const routes = createBrowserRouter([
                 loader: () => fetch('http://localhost:5000/place')
               },
               {
-                path:'AddPlace',
+                path:'/AddPlace',
                 element:<AddPlace></AddPlace>
               },
               {
-                path:'UpdatePlace',
+                path:'/UpdatePlace',
                 element:<UpdatePlace></UpdatePlace>
               },
+            //   {
+            //     path:'/addPlace',
+            //     element:<PrivetRoutes><AddPlace></AddPlace></PrivetRoutes>
+            //  },
             {
                 path:'/cards/:id',
                 element:<PrivetRoutes><CardDetails></CardDetails></PrivetRoutes>

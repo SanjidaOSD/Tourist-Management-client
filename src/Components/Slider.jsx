@@ -1,6 +1,6 @@
 
 import img1 from '../assets/tour1.jpg'
-import img2 from '../assets/tour2.jpg'
+import img3 from '../assets/tour3.jpg'
 import img5 from '../assets/tour5.jpg'
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -23,13 +23,13 @@ const Slider = () => {
                 {delay: 2000}
             } 
             className="mySwiper">
-                <SwiperSlide><div className='w-full h-[30%]'>
+                <SwiperSlide><div className='w-full h-[600px]'>
                 <img src={img1} alt="" />
             </div></SwiperSlide>
-                <SwiperSlide><div className='w-full h-28'>
-                <img src={img2} alt="" />
+                <SwiperSlide><div className='w-full h-[600px]'>
+                <img src={img3} alt="" />
             </div></SwiperSlide>
-                <SwiperSlide><div className='w-full h-28'>
+                <SwiperSlide><div className='w-full h-[600px]'>
                 <img src={img5} alt="" />
             </div></SwiperSlide>
                
