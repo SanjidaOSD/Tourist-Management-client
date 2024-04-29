@@ -1,35 +1,22 @@
-import React, { Children } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
-
 import {
-  createBrowserRouter,
-  RouterProvider,
+  RouterProvider
 } from "react-router-dom";
-import AddPlace from './Components/AddPlace.jsx';
-import UpdatePlace from './Components/UpdatePlace.jsx';
+import routes from './Routes/Routes.jsx';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import FirebaseProvider from './FirebaseProvider/FirebaseProvider.jsx';
 
 
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App></App>,  
-  },
-  {
-    path:'AddPlace',
-    element:<AddPlace></AddPlace>
-  },
-  {
-    path:'UpdatePlace',
-    element:<UpdatePlace></UpdatePlace>
-  }
-  
-]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <FirebaseProvider>
+      <RouterProvider router={routes} />
+
+      <ToastContainer />
+    </FirebaseProvider>
   </React.StrictMode>,
 )

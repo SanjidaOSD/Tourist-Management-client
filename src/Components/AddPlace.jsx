@@ -1,47 +1,73 @@
+import Swal from 'sweetalert2'
 
 const AddPlace = () => {
+    const handleAddPlace = event => {
+        event.preventDefault();
+
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const spot = form.spot.value;
+        const country = form.country.value;
+        const location = form.location.value;
+        const description = form.description.value;
+        const coast = form.coast.value;
+        const seasonality = form.seasonality.value;
+        const travel = form.travel.value;
+        const visitors = form.visitors.value;
+        const image = form.image.value;
+
+
+        const newPlace = { name, email, spot, country, location, description, coast, seasonality, travel, visitors, image }
+        console.log(newPlace)
+
+        // send data to the server
+        fetch('http://localhost:5000/place' ,{
+         method:'POST',
+         headers:{
+            'content-type': 'application/json'
+         },
+         body:JSON.stringify(newPlace)
+        })
+        .then(res =>res.json())
+        .then(data =>{
+            console.log(data)
+            if (data.insertId) {
+                Swal.fire({
+                    title: 'success!',
+                    text: 'User added successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+                
+            }
+        })
+    }
     return (
         <div>
-            <form>
+            
                 <div>
-                    <label className="form-control w-full max-w-xs">
-                        <div className="label">
-                            <span className="label-text">Spot Name</span>
-                        </div>
-                        <input type="text" placeholder="Spot name" className="input input-bordered w-full max-w-xs" />
-
-                    </label>
-                    <label className="form-control w-full max-w-xs">
-                        <div className="label">
-                            <span className="label-text">Spot Name</span>
-                        </div>
-                        <input type="text" placeholder="Spot name" className="input input-bordered w-full max-w-xs" />
-
-                    </label>
-
-
-                    {/* ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */}
                     <div className="hero min-h-screen bg-base-200">
                         <div className="hero-content flex-col">
                             <div className="text-center">
                                 <h1 className="text-5xl font-bold">Add Tourist Spot Place</h1>
-                                <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                               
                             </div>
                             <div className="card shrink-0 w-full shadow-2xl bg-[#F4F3F0]">
-                                <form className="card-body">
+                                <form onSubmit={handleAddPlace} className="card-body">
 
                                     <div className="md:flex md:gap-6">
                                         <div className="form-control md:w-1/2">
                                             <label className="label">
                                                 <span className="label-text">User Name</span>
                                             </label>
-                                            <input type="user name" name="name" placeholder="Enter your name" className="input input-bordered" required />
+                                            <input type="name" name="name" placeholder="Enter your name" className="input input-bordered w-full" required />
                                         </div>
                                         <div className="form-control md:w-1/2">
                                             <label className="label">
-                                            <span className="label-text">User Email</span>
+                                                <span className="label-text">User Email</span>
                                             </label>
-                                            <input type="user email" name="email" placeholder="Enter your email" className="input input-bordered" required />
+                                            <input type="email" name="email" placeholder="Enter your email" className="input input-bordered" required />
 
                                         </div>
                                     </div>
@@ -50,13 +76,13 @@ const AddPlace = () => {
                                             <label className="label">
                                                 <span className="label-text">Spot Name</span>
                                             </label>
-                                            <input type="spot name" name="name" placeholder="Enter spot name" className="input input-bordered" required />
+                                            <input type="spot name" name="spot" placeholder="Enter spot name" className="input input-bordered" required />
                                         </div>
                                         <div className="form-control md:w-1/2">
                                             <label className="label">
                                                 <span className="label-text">Country Name</span>
                                             </label>
-                                            <input type="country name" name="country name" placeholder="Enter country name" className="input input-bordered" required />
+                                            <input type="country name" name="country" placeholder="Enter country name" className="input input-bordered" required />
 
                                         </div>
                                     </div>
@@ -95,34 +121,34 @@ const AddPlace = () => {
                                             <label className="label">
                                                 <span className="label-text">Travel Time</span>
                                             </label>
-                                            <input type="travel time" name="travel time" placeholder="travel time" className="input input-bordered" required />
+                                            <input type="travel time" name="travel" placeholder="travel time" className="input input-bordered" required />
                                         </div>
                                         <div className="form-control md:w-1/2">
                                             <label className="label">
                                                 <span className="label-text">TotalVisitors PerYear</span>
                                             </label>
-                                            <input type="totalVisitorsPerYear" name="totalVisitorsPerYear" placeholder="totalVisitorsPerYear" className="input input-bordered" required />
+                                            <input type="visitors" name="visitors" placeholder="totalVisitorsPerYear" className="input input-bordered" required />
 
                                         </div>
                                     </div>
-                                   
-                                        <div className="form-control md:w-full">
-                                            <label className="label">
-                                                <span className="label-text">Image</span>
-                                            </label>
-                                            <input type="image" name="image" placeholder="image" className="input input-bordered" required />
 
-                                        </div>
-            
+                                    <div className="form-control md:w-full">
+                                        <label className="label">
+                                            <span className="label-text">Image</span>
+                                        </label>
+                                        <input type="text" name="image" placeholder="image url" className="input input-bordered" required />
+
+                                    </div>
+
                                     <div className="form-control mt-6">
-                                        <button className="btn btn-primary">Login</button>
+                                        <button className="btn btn-ghost bg-gray-600 text-white">Add Place</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
-            </form >
+        
         </div >
     );
 };
