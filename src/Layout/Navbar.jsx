@@ -4,6 +4,7 @@ import UseAuth from "../Hooks/UseAuth";
 // import { FaUserLarge } from "react-icons/fa6";
 import { FcBusinesswoman } from "react-icons/fc";
 import { PiAirplaneTiltFill } from "react-icons/pi";
+import plane from '../assets/plane.png';
 
 
 
@@ -42,7 +43,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex">
-                        <a className="btn btn-ghost text-3xl"><PiAirplaneTiltFill /><span className="text-red-800">AdventureAtlas</span></a>
+                        <a className="btn btn-ghost text-3xl flex"><img src={plane} className="h-[50px] w-[70px]" alt="" /><span className="text-red-800">AdventureAtlas</span></a>
 
                     </div>
                 </div>
