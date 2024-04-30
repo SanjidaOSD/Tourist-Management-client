@@ -1,3 +1,6 @@
+import { FaLocationDot } from "react-icons/fa6";
+import { IoMdStopwatch } from "react-icons/io";
+import { MdVisibility } from "react-icons/md";
 import { Link, useLoaderData } from "react-router-dom";
 
 
@@ -10,15 +13,19 @@ const SpotDetails = () => {
         <div>
 
             <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row">
+                <div className="hero-content flex-col lg:flex-row lg:gap-24">
                     <img src={spot.image} className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
-                        <h1 className="text-5xl font-bold">{spot.country}</h1>
-                        <h1 className="text-2xl font-bold text-red-800">{spot.spotName}</h1>
-                        <p className="py-6">{spot.description}</p>
-                        <p className="py-6">{spot.location}</p>
-                        <p className="py-6">{spot.seasonality}</p>
-                        <p className="py-6">{spot.coast}</p>
+                        <h2 className="card-title text-3xl font-bold"><span className="text-xl">Country</span>: {spot.country}</h2>
+                        <h2 className="card-title"><FaLocationDot></FaLocationDot>{spot.spotName}</h2>
+                        <h2 className="card-title">Seasonality: {spot.seasonality}</h2>
+                        <p className="mt-4 mb-4">{spot.description}</p>
+
+                        <div className="flex gap-28 mb-6">
+                            <h2 className="card-title">{spot.coast}$</h2>
+                            <h2 className="card-title"><IoMdStopwatch></IoMdStopwatch>{spot.travel}</h2>
+                        </div>
+                        <h2 className="card-title"><MdVisibility></MdVisibility>{spot.visitors}</h2>
 
                         <Link to='/'><button className="btn bg-slate-500 text-white">Back to home</button>
                         </Link>
@@ -26,7 +33,7 @@ const SpotDetails = () => {
                 </div>
             </div>
 
-         
+
         </div>
     );
 };
