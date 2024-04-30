@@ -1,9 +1,8 @@
 
 import { createBrowserRouter } from "react-router-dom";
-// import Home from "../Pages/Home/Home";
-import About from "../Pages/About";
+// import About from "../Pages/About";
 
-import NotFound from "../Pages/About";
+import NotFound from "../Pages/NotFound";
 // import App from "../App";
 import AddPlace from "../Components/AddPlace";
 import UpdatePlace from "../Components/UpdatePlace";
@@ -59,7 +58,7 @@ const routes = createBrowserRouter([
               {
                 path:'/spotDetails/:_id',
                 element:<PrivetRoutes><SpotDetails></SpotDetails></PrivetRoutes>,
-                loader: async ({params}) => fetch(`http://localhost:5000/place/${params._id}`)
+                loader: ({params}) => fetch(`http://localhost:5000/place/${params._id}`)
                  
                     
                 
@@ -72,10 +71,7 @@ const routes = createBrowserRouter([
                 path:'/cards/:id',
                 element:<PrivetRoutes><CardDetails></CardDetails></PrivetRoutes>
             },
-            {
-                path:'/about',
-                element:<About></About>
-            },
+           
             {
                path:'/contact',
                element:<PrivetRoutes><ContactUs></ContactUs></PrivetRoutes>

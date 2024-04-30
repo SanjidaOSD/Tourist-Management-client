@@ -1,8 +1,12 @@
 import { Helmet } from "react-helmet";
+import Navbar from "../Layout/Navbar";
+import Footer from "../Layout/Footer";
 
 const NotFound = () => {
     return (
+        
         <div>
+            <Navbar></Navbar>
              <Helmet>
                 <meta charSet="utf-8" />
                 <title>User Not Found</title>
@@ -17,6 +21,9 @@ const NotFound = () => {
             </h2>
             
         </div>
+
+        <Footer></Footer>
+
         </div>
     );
 };

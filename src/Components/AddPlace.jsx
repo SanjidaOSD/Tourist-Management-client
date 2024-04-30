@@ -9,7 +9,7 @@ const AddPlace = () => {
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
-        const spot = form.spot.value;
+        const spotName = form.spotName.value;
         const country = form.country.value;
         const location = form.location.value;
         const description = form.description.value;
@@ -18,10 +18,9 @@ const AddPlace = () => {
         const travel = form.travel.value;
         const visitors = form.visitors.value;
         const image = form.image.value;
-        // const userEmail = user.userEmail;
 
 
-        const newPlace = { name, email, spot, country, location, description, coast, seasonality, travel, visitors, image }
+        const newPlace = { name, email, spotName, country, location, description, coast, seasonality, travel, visitors, image }
         console.log(newPlace)
 
         // send data to the server
@@ -35,7 +34,7 @@ const AddPlace = () => {
         .then(res =>res.json())
         .then(data =>{
             console.log(data)
-            if (data.insertId) {
+            if (data.insertedId) {
                 Swal.fire({
                     title: 'success!',
                     text: 'User added successfully',

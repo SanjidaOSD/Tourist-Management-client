@@ -12,7 +12,7 @@ import plane from '../assets/plane.png';
 const Navbar = () => {
 
     const { logout, user } = UseAuth()
-    console.log(user);
+    // console.log(user);
 
 
     const navLink = <>
