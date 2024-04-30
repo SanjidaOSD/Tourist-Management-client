@@ -3,12 +3,11 @@ import { createBrowserRouter } from "react-router-dom";
 // import About from "../Pages/About";
 
 import NotFound from "../Pages/NotFound";
-// import App from "../App";
 import AddPlace from "../Components/AddPlace";
 import UpdatePlace from "../Components/UpdatePlace";
 import Github from "../Pages/GithubLogin";
 import EmailLogin from "../Pages/EmailLogin";
-import CardDetails from "../Pages/CardDetails";
+// import CardDetails from "../Pages/CardDetails";
 import PrivetRoutes from "../Routes/PrivetRoutes";
 
 import Root from "../Layout/Root";
@@ -19,7 +18,6 @@ import Home from "../Pages/Home";
 import MyList from "../Components/MyList";
 import AllTouristSpot from "../Components/AllTouristSpot";
 import SpotDetails from "../Components/SpotDetails";
-import Country from "../Components/Country";
 import CountryDetails from "../Pages/CountryDetails";
 // import AddPlace from '../Components/AddPlace'
 
@@ -31,11 +29,7 @@ const routes = createBrowserRouter([
         element:<Root></Root>,
         errorElement:<NotFound></NotFound>,
         children:[
-            // {
-            //     path: "/",
-            //     element: <App></App>,  
-            //     loader: () => fetch('http://localhost:5000/place')
-            //   },
+           
             {
                 path: "/",
                 element: <Home></Home>,  
@@ -71,14 +65,11 @@ const routes = createBrowserRouter([
                     
                 
               },
-            //   {
-            //     path:'/addPlace',
-            //     element:<PrivetRoutes><AddPlace></AddPlace></PrivetRoutes>
-            //  },
-            {
-                path:'/cards/:id',
-                element:<PrivetRoutes><CardDetails></CardDetails></PrivetRoutes>
-            },
+           
+            // {
+            //     path:'/cards/:id',
+            //     element:<PrivetRoutes><CardDetails></CardDetails></PrivetRoutes>
+            // },
            
             {
                path:'/contact',

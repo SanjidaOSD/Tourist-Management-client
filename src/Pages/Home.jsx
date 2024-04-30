@@ -25,10 +25,10 @@ function Home() {
       </div>
 
 
-      <h1 className=' text-center text-5xl text-red-800 font-bold mt-12 mb-12'>tourist spot</h1>
+      <h1 className=' text-center text-5xl text-red-800 font-bold mt-24 mb-16'>tourist spot</h1>
       <div className='grid md:grid-cols-3 gap-4'>
         {
-          places.map(place => <PlaceCard
+          places.slice(0,6).map(place => <PlaceCard
             key={place._id}
             place={place}
           ></PlaceCard>)
@@ -36,7 +36,7 @@ function Home() {
 
       </div>
       <div>
-        <h3 className='text-center text-5xl text-purple-500 font-bold mt-12 mb-12'>Countries</h3>
+        <h3 className='text-center text-5xl text-red-800 font-bold mt-24 mb-16'>Countries</h3>
         <div>
           <Country></Country>
         </div>

@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 
-const SingleListItem = ({myList, idx}) => {
-    const handleDelete = (id) =>{
+const SingleListItem = ({myList, idx, handleDelete}) => {
         
-    }
+        
+    
     const {_id, name, email, spotName, country, location, description, coast, seasonality, travel, visitors, image } = myList
 
     return (
@@ -25,7 +25,7 @@ const SingleListItem = ({myList, idx}) => {
                 </div>
                 <div className="col-span-3 flex justify-center items-center border-b border-s py-4 gap-5 flex-wrap">
                     <Link to={`/updateSpot/${_id}`}><button className='px-3 py-1 bg-blue-300 font-semibold text-black rounded-md'>Update</button></Link>
-                    <button className='px-3 py-1 bg-blue-300 font-semibold text-black rounded-md'>Delete</button>
+                    <button onClick={()=>handleDelete(_id)} className='px-3 py-1 bg-blue-300 font-semibold text-black rounded-md'>Delete</button>
                 </div>
             </div>
         </div>
