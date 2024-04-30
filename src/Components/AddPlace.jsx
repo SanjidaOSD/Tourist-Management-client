@@ -39,7 +39,7 @@ const AddPlace = () => {
                     title: 'success!',
                     text: 'User added successfully',
                     icon: 'success',
-                    confirmButtonText: 'Cool'
+                    confirmButtonText: "ok"
                   })
                 
             }
@@ -78,7 +78,7 @@ const AddPlace = () => {
                                             <label className="label">
                                                 <span className="label-text">Spot Name</span>
                                             </label>
-                                            <input type="spot name" name="spot" placeholder="Enter spot name" className="input input-bordered" required />
+                                            <input type="spot name" name="spotName" placeholder="Enter spot name" className="input input-bordered" required />
                                         </div>
                                         <div className="form-control md:w-1/2">
                                             <label className="label">

@@ -19,6 +19,8 @@ import Home from "../Pages/Home";
 import MyList from "../Components/MyList";
 import AllTouristSpot from "../Components/AllTouristSpot";
 import SpotDetails from "../Components/SpotDetails";
+import Country from "../Components/Country";
+import CountryDetails from "../Pages/CountryDetails";
 // import AddPlace from '../Components/AddPlace'
 
 
@@ -40,6 +42,12 @@ const routes = createBrowserRouter([
                 loader: () => fetch('http://localhost:5000/place')
               },
               {
+                path:'/country/:country',
+                element:<CountryDetails></CountryDetails>,
+                loader:({params}) => fetch(`http://localhost:5000/country/${params.country}`)
+
+              },
+              {
                   path:'/allSpot',
                   element:<AllTouristSpot></AllTouristSpot>
               },
@@ -52,7 +60,7 @@ const routes = createBrowserRouter([
                 element:<UpdatePlace></UpdatePlace>
               },
               {
-                path:'/myList',
+                path:'/myList/:email',
                 element:<PrivetRoutes><MyList></MyList></PrivetRoutes>
               },
               {

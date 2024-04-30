@@ -19,19 +19,16 @@ const Navbar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/allSpot'>All tourist spot </NavLink></li>
 
-        {/* <li><NavLink to='/about'>About us</NavLink></li> */}
 
         {user && <>
-            {/* <li><NavLink to='/updatePlace'>Update Place</NavLink></li>
-            <li><NavLink to='/contact'>Contact Us</NavLink></li> */}
+            
             <li><NavLink to='/addPlace'>Add tourist spot</NavLink></li>
-            <li><NavLink to='/myList'>My list</NavLink></li>
+            <li><NavLink to={`/myList/${user.email}`}>My list</NavLink></li>
         </>}
     </>
 
 
 
-    // const { logout, user } = UseAuth()
 
     return (
         <div>
