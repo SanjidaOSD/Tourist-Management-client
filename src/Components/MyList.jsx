@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import PropTypes from 'prop-types';
+import UseAuth from "../Hooks/UseAuth";
 
 
-const MyList = ({ place }) => {
+const MyList = () => {
+    const {user} = UseAuth() || {};
+    console.log(user.email)
     useEffect(() => {
-
-        if (place && place.email) {
-            fetch(`http://localhost:5000/myAddList/${place.email}`)
+            fetch(`http://localhost:5000/myAddList/${user?.email}`)
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
@@ -14,8 +15,8 @@ const MyList = ({ place }) => {
                 .catch(error => {
                     console.error('Error fetching data:', error);
                 });
-        }
-    }, [place]);
+        
+    }, [user]);
 
     return (
         <div>

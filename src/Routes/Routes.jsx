@@ -19,6 +19,7 @@ import ContactUs from '../Pages/ContactUs';
 import Home from "../Pages/Home";
 import MyList from "../Components/MyList";
 import AllTouristSpot from "../Components/AllTouristSpot";
+import SpotDetails from "../Components/SpotDetails";
 // import AddPlace from '../Components/AddPlace'
 
 
@@ -54,6 +55,14 @@ const routes = createBrowserRouter([
               {
                 path:'/myList',
                 element:<PrivetRoutes><MyList></MyList></PrivetRoutes>
+              },
+              {
+                path:'/spotDetails/:_id',
+                element:<PrivetRoutes><SpotDetails></SpotDetails></PrivetRoutes>,
+                loader: async ({params}) => fetch(`http://localhost:5000/place/${params._id}`)
+                 
+                    
+                
               },
             //   {
             //     path:'/addPlace',

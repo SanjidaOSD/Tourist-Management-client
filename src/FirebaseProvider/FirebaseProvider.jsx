@@ -69,7 +69,7 @@ const FirebaseProvider = ({ children }) => {
         }
     }, [])
 
-console.log(user)
+// console.log(user)
     const allValues = {
         user,
         loading,

@@ -1,8 +1,8 @@
 import Swal from 'sweetalert2'
-// import UseAuth from '../Hooks/UseAuth';
+import UseAuth from '../Hooks/UseAuth';
 
 const AddPlace = () => {
-    // const {user} = UseAuth() || {};
+    const {user} = UseAuth() || {};
     const handleAddPlace = event => {
         event.preventDefault();
 
@@ -18,6 +18,7 @@ const AddPlace = () => {
         const travel = form.travel.value;
         const visitors = form.visitors.value;
         const image = form.image.value;
+        // const userEmail = user.userEmail;
 
 
         const newPlace = { name, email, spot, country, location, description, coast, seasonality, travel, visitors, image }
@@ -63,13 +64,13 @@ const AddPlace = () => {
                                             <label className="label">
                                                 <span className="label-text">User Name</span>
                                             </label>
-                                            <input type="name" name="name" placeholder="Enter your name" className="input input-bordered w-full" required />
+                                            <input type="name" name="name"defaultValue={user?.displayName} placeholder="Enter your name" className="input input-bordered w-full" required />
                                         </div>
                                         <div className="form-control md:w-1/2">
                                             <label className="label">
                                                 <span className="label-text">User Email</span>
                                             </label>
-                                            <input type="email" name="email" placeholder="Enter your email" className="input input-bordered" required />
+                                            <input type="email" name="email"defaultValue={user?.email} placeholder="Enter your email" className="input input-bordered" required />
 
                                         </div>
                                     </div>
