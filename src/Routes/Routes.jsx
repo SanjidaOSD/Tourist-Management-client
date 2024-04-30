@@ -17,6 +17,8 @@ import Register from "../Pages/Register";
 import Login from "../Pages/Login";
 import ContactUs from '../Pages/ContactUs';
 import Home from "../Pages/Home";
+import MyList from "../Components/MyList";
+import AllTouristSpot from "../Components/AllTouristSpot";
 // import AddPlace from '../Components/AddPlace'
 
 
@@ -38,12 +40,20 @@ const routes = createBrowserRouter([
                 loader: () => fetch('http://localhost:5000/place')
               },
               {
+                  path:'/allSpot',
+                  element:<AllTouristSpot></AllTouristSpot>
+              },
+              {
                 path:'/AddPlace',
                 element:<AddPlace></AddPlace>
               },
               {
                 path:'/UpdatePlace',
                 element:<UpdatePlace></UpdatePlace>
+              },
+              {
+                path:'/myList',
+                element:<PrivetRoutes><MyList></MyList></PrivetRoutes>
               },
             //   {
             //     path:'/addPlace',

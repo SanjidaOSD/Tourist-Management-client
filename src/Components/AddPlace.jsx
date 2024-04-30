@@ -1,6 +1,8 @@
 import Swal from 'sweetalert2'
+// import UseAuth from '../Hooks/UseAuth';
 
 const AddPlace = () => {
+    // const {user} = UseAuth() || {};
     const handleAddPlace = event => {
         event.preventDefault();
 

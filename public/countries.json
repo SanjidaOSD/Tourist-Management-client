@@ -1,0 +1,36 @@
+{
+    "id": 1,
+    "country": "Bangladesh",
+    "destinations": ["Sundarban", "Cox’s Bazar", "Rangamati", "Bandarban", "Saint Martin’s Island"],
+    "image_url": "https://example.com/bangladesh.jpg"
+},
+{
+    "id": 2,
+    "country": "Thailand",
+    "destinations": ["Bangkok", "Chiang Mai", "Ayutthaya", "Phuket", "Phi Phi Islands"],
+    "image_url": "https://example.com/thailand.jpg"
+},
+{
+    "id": 3,
+    "country": "Indonesia",
+    "destinations": ["Bali", "Borobudur Temple", "Komodo National Park", "Raja Ampat Islands", "Yogyakarta"],
+    "image_url": "https://example.com/indonesia.jpg"
+},
+{
+    "id": 4,
+    "country": "Malaysia",
+    "destinations": ["Kuala Lumpur", "Langkawi", "Penang", "Cameron Highlands", "Taman Negara National Park"],
+    "image_url": "https://example.com/malaysia.jpg"
+},
+{
+    "id": 5,
+    "country": "Vietnam",
+    "destinations": ["Ha Long Bay", "Ho Chi Minh City", "Hoi An Ancient Town", "Phong Nha Caves", "Mekong Delta"],
+    "image_url": "https://example.com/vietnam.jpg"
+},
+{
+    "id": 6,
+    "country": "Cambodia",
+    "destinations": ["Angkor Wat", "Siem Reap", "Phnom Penh", "Kep", "Bokor National Park"],
+    "image_url": "https://example.com/cambodia.jpg"
+}
