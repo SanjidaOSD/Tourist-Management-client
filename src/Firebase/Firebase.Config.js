@@ -5,6 +5,7 @@ import { getAuth } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
+ 
   apiKey: "AIzaSyCBAcL4HXI2pUapiflVFGZGzkJMjDtGXT0",
   authDomain: "m56-tourism-mabagement-website.firebaseapp.com",
   projectId: "m56-tourism-mabagement-website",
@@ -12,6 +13,7 @@ const firebaseConfig = {
   messagingSenderId: "565282699266",
   appId: "1:565282699266:web:48b88a779c1e5a95744f1b"
 };
+  
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
