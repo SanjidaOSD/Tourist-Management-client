@@ -26,7 +26,7 @@ function Home() {
 
 
       <h1 className=' text-center text-5xl text-red-800 font-bold mt-24 mb-16'>tourist spot</h1>
-      <div className='grid md:grid-cols-3 gap-4'>
+      <div className='grid md:grid-cols-3 gap-12'>
         {
           places.slice(0,6).map(place => <PlaceCard
             key={place._id}
