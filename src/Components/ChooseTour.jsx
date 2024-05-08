@@ -19,11 +19,11 @@ const ChooseTour = () => {
             <p className="mb-16">Find your next travel adventure and make it memorable.Explore <br />wildlife,enjoy seaside or book a cruise tour, <br />Check out our popular destanations.</p>
 
            <div className="flex gap-12">
-           <button className="text-3xl"><CiPlane className="h-24 w-24"></CiPlane>Self-Guided</button>
-            <button className="text-3xl"><RiShipLine className="h-24 w-24"></RiShipLine>Self-Guided</button>
-            <button className="text-3xl"><GiPikeman className="h-24 w-24"></GiPikeman>Adventure</button>
-            <button className="text-3xl"><PiMountains className="h-24 w-24"></PiMountains>Self-Guided</button>
-            <button className="text-3xl"><FaRegSun className="h-24 w-24"></FaRegSun>Self-Guided</button>
+           <button className="text-3xl hover:scale-125"><CiPlane className="h-24 w-24"></CiPlane>Self-Guided</button>
+            <button className="text-3xl hover:scale-125"><RiShipLine className="h-24 w-24"></RiShipLine>Self-Guided</button>
+            <button className="text-3xl hover:scale-125"><GiPikeman className="h-24 w-24"></GiPikeman>Adventure</button>
+            <button className="text-3xl hover:scale-125"><PiMountains className="h-24 w-24"></PiMountains>Self-Guided</button>
+            <button className="text-3xl hover:scale-125"><FaRegSun className="h-24 w-24"></FaRegSun>Self-Guided</button>
            </div>
           </div>
         </div>
