@@ -30,7 +30,7 @@ const GoogleLogin = () => {
                 <title>Google log in</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
-        <button onClick={()=> handleGoogleLogin(googleLogin)} className="btn w-full hover: bg-slate-100 ">Log in with <FcGoogle></FcGoogle></button>
+        <button onClick={()=> handleGoogleLogin(googleLogin)} className="btn w-full hover:bg-pink-300 bg-pink-400 text-white ">Log in with <FcGoogle></FcGoogle></button>
     </div>
     );
 };

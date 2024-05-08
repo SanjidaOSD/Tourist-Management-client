@@ -11,7 +11,7 @@ const CountryDetails = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/country/${country}`)
+        fetch(`https://m56-tourist-management-website-server.vercel.app/country/${country}`)
             .then(res => res.json())
             .then(data => {
                 setCountryDetails(data);
@@ -33,7 +33,7 @@ const CountryDetails = () => {
                                 <div className="card card-compact w-96 bg-base-100 shadow-xl">
                                     <figure><img src={countryDetail.image} alt="Shoes" /></figure>
                                     <div className="card-body">
-                                        <h2 className="card-title text-3xl font-bold"><span className="text-xl">Country</span>: {countryDetail.country}</h2>
+                                        <h2 className="card-title text-3xl font-bold text-pink-600"><span className="text-xl">Country</span>: {countryDetail.country}</h2>
                                         <h2 className="card-title"><FaLocationDot></FaLocationDot>{countryDetail.spotName}</h2>
                                         <h2 className="card-title">Seasonality: {countryDetail.seasonality}</h2>
 
@@ -44,7 +44,7 @@ const CountryDetails = () => {
                                         <h2 className="card-title"><MdVisibility></MdVisibility>{countryDetail.visitors}</h2>
                                         <div className="card-actions justify-end">
 
-                                            <Link to={`/spotDetails/${countryDetail._id}`}><button className="btn btn-primary">View Details</button>
+                                            <Link to={`/spotDetails/${countryDetail._id}`}><button className="btn bg-pink-400">View Details</button>
                                             </Link>
                                         </div>
                                     </div>

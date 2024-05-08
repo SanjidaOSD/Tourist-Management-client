@@ -1,16 +1,17 @@
 
 // import { GiFamilyHouse } from "react-icons/gi";
-import plane from '../assets/plane.png'
+// import plane from '../assets/plane.png'
+import logo from '../assets/logo5.png'
 
 const Footer = () => {
     return (
         <div className="md:mt-24 ">
             <hr />
-            <footer className="footer p-10 bg-White text-black lg:w-auto w-96">
+            <footer className="footer p-10 bg-pink-100 text-black lg:w-auto w-96">
                 <aside>
                     {/* <GiFamilyHouse className="font-extrabold w-12 h-16"></GiFamilyHouse> */}
-                    <img src={plane} className="h-[70px] w-[100px]" alt="" />
-                    <p className="font-bold"><span className="text-red-800 text-2xl">AdventureAtlas</span> Ltd.<br />Providing reliable tech since 1992</p>
+                    <img src={logo} className="h-[70px] w-[100px] rounded-2xl" alt="" />
+                    <p className="font-bold"><span className="text-red-800 text-2xl"><span className="text-pink-300 font-bold"><span className="text-pink-700">A</span>dventure<span className="text-pink-700">A</span>tlas</span></span> Ltd.<br />Providing reliable tech since 1992</p>
                 </aside>
                 <nav>
                     <h6 className="footer-title text-xl font-bold">Services</h6>
@@ -34,7 +35,7 @@ const Footer = () => {
                 </nav>
             </footer>
             <hr />
-            <footer className="footer footer-center p-4 bg-white font-bold text-black">
+            <footer className="footer footer-center p-4 bg-pink-300 font-bold text-black">
                 <aside>
                     <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
                 </aside>

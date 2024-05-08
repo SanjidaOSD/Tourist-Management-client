@@ -15,7 +15,7 @@ const MyList = () => {
     const { user } = UseAuth() || {};
     console.log(user.email)
     useEffect(() => {
-        fetch(`http://localhost:5000/myList/${user?.email}`)
+        fetch(`https://m56-tourist-management-website-server.vercel.app/myList/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setMyLists(data);
@@ -41,7 +41,7 @@ const MyList = () => {
         }).then((result) => {
 
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/place/${id}`, {
+                fetch(`https://m56-tourist-management-website-server.vercel.app/place/${id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())
@@ -75,7 +75,7 @@ const MyList = () => {
                     :
 
                     <div>
-                        <div className="grid grid-cols-12 bg-slate-500 text-white border-x mt-12">
+                        <div className="grid grid-cols-12 bg-pink-300 text-white border-x mt-12">
                             <div className="flex justify-center items-center col-span-1 border-y  py-2">
                                 <h1>SL No</h1>
                             </div>

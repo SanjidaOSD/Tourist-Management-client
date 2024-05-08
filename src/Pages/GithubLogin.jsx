@@ -31,7 +31,7 @@ const Github = () => {
         <title>GitHub login</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-      <button onClick={() => handleGithubLogin(githubLogin)} className="btn w-full hover:bg-slate-100">Log in with <FaGithub /></button>
+      <button onClick={() => handleGithubLogin(githubLogin)} className="btn w-full hover:bg-pink-300 bg-pink-300 text-white">Log in with <FaGithub /></button>
     </div>
   );
 };

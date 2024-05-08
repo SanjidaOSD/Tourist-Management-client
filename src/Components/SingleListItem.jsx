@@ -24,8 +24,8 @@ const SingleListItem = ({myList, idx, handleDelete}) => {
                     <h1>{coast} $</h1>
                 </div>
                 <div className="col-span-3 flex justify-center items-center border-b border-s py-4 gap-5 flex-wrap">
-                    <Link to={`/updateSpot/${_id}`}><button className='px-3 py-1 bg-blue-300 font-semibold text-black rounded-md'>Update</button></Link>
-                    <button onClick={()=>handleDelete(_id)} className='px-3 py-1 bg-blue-300 font-semibold text-black rounded-md'>Delete</button>
+                    <Link to={`/updateSpot/${_id}`}><button className='px-3 py-1 bg-pink-300 font-semibold text-white rounded-md'>Update</button></Link>
+                    <button onClick={()=>handleDelete(_id)} className='px-3 py-1 bg-pink-500 font-semibold text-white rounded-md'>Delete</button>
                 </div>
             </div>
         </div>

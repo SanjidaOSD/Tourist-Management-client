@@ -24,7 +24,7 @@ const AddPlace = () => {
         console.log(newPlace)
 
         // send data to the server
-        fetch('http://localhost:5000/place' ,{
+        fetch('https://m56-tourist-management-website-server.vercel.app/place' ,{
          method:'POST',
          headers:{
             'content-type': 'application/json'
@@ -143,7 +143,7 @@ const AddPlace = () => {
                                     </div>
 
                                     <div className="form-control mt-6">
-                                        <button className="btn btn-ghost bg-gray-600 text-white">Add Place</button>
+                                        <button className="btn btn-ghost bg-pink-300 text-white">Add Place</button>
                                     </div>
                                 </form>
                             </div>

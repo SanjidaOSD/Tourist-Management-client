@@ -33,12 +33,12 @@ const routes = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,  
-                loader: () => fetch('http://localhost:5000/place')
+                loader: () => fetch('https://m56-tourist-management-website-server.vercel.app/place')
               },
               {
                 path:'/country/:country',
                 element:<CountryDetails></CountryDetails>,
-                loader:({params}) => fetch(`http://localhost:5000/country/${params.country}`)
+                loader:({params}) => fetch(`https://m56-tourist-management-website-server.vercel.app/country/${params.country}`)
 
               },
               {
@@ -60,7 +60,7 @@ const routes = createBrowserRouter([
               {
                 path:'/spotDetails/:_id',
                 element:<PrivetRoutes><SpotDetails></SpotDetails></PrivetRoutes>,
-                loader: ({params}) => fetch(`http://localhost:5000/place/${params._id}`)
+                loader: ({params}) => fetch(`https://m56-tourist-management-website-server.vercel.app/place/${params._id}`)
                  
                     
                 
