@@ -66,10 +66,7 @@ const routes = createBrowserRouter([
                 
               },
            
-            // {
-            //     path:'/cards/:id',
-            //     element:<PrivetRoutes><CardDetails></CardDetails></PrivetRoutes>
-            // },
+           
            
             {
                path:'/contact',

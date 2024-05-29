@@ -1,4 +1,5 @@
-import Swal from 'sweetalert2'
+import swal from 'sweetalert';
+
 import UseAuth from '../Hooks/UseAuth';
 
 const AddPlace = () => {
@@ -35,12 +36,12 @@ const AddPlace = () => {
         .then(data =>{
             console.log(data)
             if (data.insertedId) {
-                Swal.fire({
-                    title: 'success!',
-                    text: 'User added successfully',
-                    icon: 'success',
-                    confirmButtonText: "ok"
-                  })
+                swal({
+                    title: "Good job!",
+                    text: "You clicked the button!",
+                    icon: "success",
+                    button: "Aww yiss!",
+                  });
                 
             }
         })
